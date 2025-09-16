@@ -6,6 +6,13 @@ import (
 	"github.com/neutron-org/neutron/v8/x/dex/types"
 )
 
+// Going thorugh test examples line by line in debug mode is highly encouraged in order
+// to better understand how the code works.
+// Because PrecDec is used everywhere it isn't possible to see human readable values out
+// of box inside debugger.
+// What can be done instead is to add PrecDec value to watches and invoke String() function on it
+// Example amountIn watch: `call amountIn.String()`
+
 // In all tests TokenA and TokenB are used which should be ATOM and USDC in that order
 // ATOM being token0 and USDC being token1
 func (s *DexTestSuite) TestDepositSymetrical() {
